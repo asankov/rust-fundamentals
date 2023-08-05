@@ -6,12 +6,12 @@ My notes from the [Rust Fundamentals course](https://app.pluralsight.com/library
 
 1. Course Overview
 2. Introduction and Setup
-3. Data Types
+3. [Data Types](./03-data-types/)
 4. Variables
 5. Operators
-6. Control Flow
-7. Ownership and Borrowing
-8. Functions and Error Handling
+6. [Control Flow](./06-control-flow/)
+7. [Ownership and Borrowing](./07-ownership-and-borrowing/)
+8. [Functions and Error Handling](./08-functions-and-error-handling/)
 9. Data Structures and Traits
 10. Collections
 11. Generics
