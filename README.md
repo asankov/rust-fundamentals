@@ -15,6 +15,6 @@ My notes from the [Rust Fundamentals course](https://app.pluralsight.com/library
 9. [Data Structures and Traits](./09-data-structures-and-traits/)
 10. [Collections](./10-collections/)
 11. [Generics](./11-generics/)
-12. Concurrency
+12. [Concurrency](./12-concurrency/)
 13. Crates and Modules
 14. Summary
