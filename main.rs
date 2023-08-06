@@ -1,3 +1,7 @@
+mod geo;
+use geo::calculations::distance as distance_calc;
+use rand::Rng;
+
 struct Waypoint {
     name: String,
     latitude: f64,
@@ -44,8 +48,6 @@ impl Segment {
 }
 
 fn main() {
-    const EARTH_RADIUS_IN_KM: f64 = 6371.0;
-
     let route = [
         Waypoint::new("KCLE".to_string(), 41.4075, -81.851111),
         Waypoint::new("WEGEM".to_string(), 41.44560, -109.9900),
@@ -62,21 +64,12 @@ fn main() {
                 continue;
             }
             Some(previous_waypoint_value) => {
-                let previous_waypoint_radians = previous_waypoint_value.latitude.to_radians();
-                let waypoint_radians = current_waypoint.latitude.to_radians();
-
-                let delta_latitude =
-                    (previous_waypoint_value.latitude - current_waypoint.latitude).to_radians();
-                let delta_longitude =
-                    (previous_waypoint_value.longitude - current_waypoint.longitude).to_radians();
-
-                let inner_city_angle = f64::powi((delta_latitude / 2.0).sin(), 2)
-                    + previous_waypoint_radians.cos()
-                        * waypoint_radians.cos()
-                        * f64::powi((delta_longitude / 2.0).sin(), 2);
-
-                let central_angle = 2.0 * inner_city_angle.sqrt().asin();
-                let distance = central_angle * EARTH_RADIUS_IN_KM;
+                let distance = distance_calc(
+                    previous_waypoint_value.latitude,
+                    previous_waypoint_value.longitude,
+                    current_waypoint.latitude,
+                    current_waypoint.longitude,
+                );
 
                 total_distance += distance;
                 previous_waypoint = Option::from(current_waypoint.clone());
@@ -89,5 +82,9 @@ fn main() {
         }
     }
 
-    println!("Total distance is {:.2} kilometers", total_distance)
+    println!("Total distance is {:.2} kilometers", total_distance);
+
+    let mut rng = rand::thread_rng();
+    let random_number: f64 = rng.gen();
+    println!("Random number is {}", random_number);
 }
