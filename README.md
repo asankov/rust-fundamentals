@@ -13,7 +13,7 @@ My notes from the [Rust Fundamentals course](https://app.pluralsight.com/library
 7. [Ownership and Borrowing](./07-ownership-and-borrowing/)
 8. [Functions and Error Handling](./08-functions-and-error-handling/)
 9. [Data Structures and Traits](./09-data-structures-and-traits/)
-10. Collections
+10. [Collections](./10-collections/)
 11. Generics
 12. Concurrency
 13. Crates and Modules
