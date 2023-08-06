@@ -18,3 +18,11 @@ My notes from the [Rust Fundamentals course](https://app.pluralsight.com/library
 12. [Concurrency](./12-concurrency/)
 13. [Crates and Modules](./13-crates-and-modules/)
 14. Summary
+
+## Where to Go from Here
+
+- Write some code
+- <https://github.com/rust-lang/rustlings> - Small exercises
+- <https://cheats.rs/> - Syntax cheat sheet
+- <https://www.rust-lang.org/learn> - Rust books and topics
+- <https://www.rust-lang.org/community> - Community support
