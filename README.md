@@ -16,5 +16,5 @@ My notes from the [Rust Fundamentals course](https://app.pluralsight.com/library
 10. [Collections](./10-collections/)
 11. [Generics](./11-generics/)
 12. [Concurrency](./12-concurrency/)
-13. Crates and Modules
+13. [Crates and Modules](./13-crates-and-modules/)
 14. Summary
