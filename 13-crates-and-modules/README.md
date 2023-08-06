@@ -44,4 +44,6 @@ The metadata file used by the Cargo package manager.
 
 Crate - a compressed archive that holds the source files of the program.
 
+The `cargo publish` command published the crate (to [crates.io](https://crates.io) by default).
 
+The `cargo yank --vers <version_to_remove> <package_name>` command deletes a crate from the registry.
